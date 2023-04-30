@@ -1,3 +1,18 @@
+.spoiler{
+  padding: 0px 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #fff;
+  background-color: #000;
+  color: transparent;
+  user-select: none;
+  transition: 0.5s
+}
+
+.spoiler:hover{
+  background-color: inherit;
+  color: inherit;
+}
 a:link {
   color: white;
   background-color: transparent;
