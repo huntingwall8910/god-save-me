@@ -8,7 +8,7 @@
 <body style="background-color:black">
 <nav>
   <ul>
-    <li><a class="active" style="color:black; font-family:Arial, Helvetica, sans-serif" href="index.html">Home</a></li>
+    <li class="active"><a style="color:black; font-family:Arial, Helvetica, sans-serif" href="index.html">Home</a></li>
     <li class="dropdown">
       <a style="color: black;font-family: arial, helvetica, sans-serif;"href="#" class=dropbtn>projects</a>
         <div class="dropdown-content">
@@ -19,9 +19,12 @@
     </li>
     <li><a style="color:black; font-family: arial, helvetica, sans-serif" href="about.html">About</a></li>
     <li><a style="color:black; font-family:Arial, Helvetica, sans-serif" href="news.html">News & Upd8s</a></li>
-    <li style="float:right"><p style="color:black; font-family:Arial, Helvetica, sans-serif; float:right">huntingwall.000webhostapp.com</p></li>
+    <li style="float:right"><p id="sitename"style="color:black; font-family:Arial, Helvetica, sans-serif; float:right"></p></li>
   </ul>
 </nav>
+<script>
+document.getElementById("sitename").innerHTML = window.location.hostname;
+</script>
 <img class="rainbow" style="float:left" src="pneumococcus.png">
 <h1 style="color:white">YOOO HOME PAGE</h1>
 </body>
