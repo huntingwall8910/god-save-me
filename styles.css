@@ -1,3 +1,13 @@
+.spoiler{
+  background-color: gray;
+  color: transparent;
+  user-select: none;
+}
+
+.spoiler:hover{
+  background-color: inherit;
+  color: inherit;
+}
 .wrapper {
   height: 100%;
   width: 100%;
