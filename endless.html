@@ -1,0 +1,40 @@
+<<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <title>huntingwall8910</title>
+  <link rel='icon' type='image/x-icon' href='icon.png'>
+  <link rel=stylesheet href=styles.css>
+</head>
+<body style="background-color:black">
+<nav>
+  <ul>
+    <li><a style="color:black; font-family:Arial, Helvetica, sans-serif" href="index.html">Home</a></li>
+    <li class="dropdown">
+      <a style="color:black; font-family: arial, helvetica, sans-serif" href="javascipt:void(0)" class=dropbtn>projects</a>
+        <div class="dropdown-content">
+          <a style="color:black; font-family: arial, helvetica, sans-serif" href="nameguesser.html"> Name guessr</a>
+          <a style="color:black; font-family: arial, helvetica, sans-serif" href="epilepsymachine.html">epilepsy machine</a>
+          <a style="color:black; font-family: arial, helvetica, sans-serif" href="colors.html">color thing</a>
+          <a style="color:black; font-family: arial. helvetica, sans-serif" href="endless.html">endless</a>
+        </div>
+    </li>
+    <li style="background-color: #f0f78d"><a class="active" style="color:black; font-family: arial, helvetica, sans-serif" href="about.html">About</a></li>
+      <li><a style="color:black; font-family:Arial, Helvetica, sans-serif" href="news.html">News & Upd8s</a></li>
+    <li style="float:right"><p id="sitename" style="color:black; font-family:Arial, Helvetica, sans-serif; float:right"></p></li>
+  </ul>
+</nav>
+<pre>
+  endless scroll<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br<br><br><br><br><br><br><br><br>
+</pre>
+<script>
+  document.addEventListener( 'scroll', function () {
+  var pre = document.querySelector( 'pre' );
+  pre.innerText = pre.innerText +  '\n'
+});
+
+document.getElementById("sitename").innerHTML = window.location.hostname;
+</script>
+  <body>
+
+  </body>
+</html>
