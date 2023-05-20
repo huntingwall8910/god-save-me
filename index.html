@@ -3,7 +3,7 @@
 <head>
 <title>huntingwall8910</title>
 <link rel='icon' type='image/x-icon' href='icon.png'>
-<link rel=stylesheet href=styles.css
+<link rel=stylesheet href=styles.css>
 </head>
 <body style="background-color:black">
 <nav>
@@ -28,5 +28,12 @@ document.getElementById("sitename").innerHTML = window.location.hostname;
 </script>
 <img class="rainbow" style="float:left" src="pneumococcus.png">
 <h1 style="color:white">YOOO HOME PAGE</h1>
+<p style="color:white; font-family: Arial, Helvetica, sans-serif">your number will be <span id="rand"></span></p>
+<input type="button" value="click to generate" onclick="gen()">
+<script>
+  function gen() {
+    document.getElementById("rand").innerHTML = Math.floor(Math.random() * 10000000)
+  }
+</script>
 </body>
 </html>
