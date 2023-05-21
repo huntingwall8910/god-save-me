@@ -1,0 +1,1 @@
+document.getElementById("sitename").innerHTML = window.location.hostname;
