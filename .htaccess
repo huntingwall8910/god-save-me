@@ -1,0 +1,19 @@
+#fucky you quit snooping
+RewriteEngine on
+
+RewriteBase /
+#terminate all rewrite loops
+RewriteCond %{ENV:REDIRECT_STATUS} 200
+RewriteRule ^ - [L]
+#1)Remove ".html" , ".php",".css" extension.
+#The following rule redirects "/file.ext" to "/file" 
+RewriteRule ^(.+)\.(html|php|css)$ $1 [L,R,NE]
+#checks if "/file" .html exists, if it exits ,map "/file" to "/file.html"
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.*?)/?$ $1.html [L]
+#checks if "/file" .php exists, if it exits ,map "/file" to "/file.php"
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^(.*?)/?$ $1.php [L]
+#checks if "/file" .css exists, if it exits ,map "/file" to "/file.css"
+RewriteCond %{REQUEST_FILENAME}.css -f
+RewriteRule ^(.*?)/?$ $1.css [L]
