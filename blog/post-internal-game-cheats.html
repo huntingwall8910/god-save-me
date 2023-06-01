@@ -1,10 +1,38 @@
 <html>
     <head>
+        <input onclick="location.href=window.location.hostname" type="button" value="go back to website">
         <link rel=stylesheet href=blogstyles.css><h1> How do internal game cheats work?</h1>
     </head>
-    <body background-color>
+    <body id="top"background-color>
         <p>A common misconception with cheating is that it's hard, or you need to be a master 1337 hacker to do it</p>
-        <img style="scale: 0.5;"src="https://media.tenor.com/CgGUXc-LDc4AAAAC/hacker-pc.gif">
+        <img width=498 height=469 src="https://media.tenor.com/CgGUXc-LDc4AAAAC/hacker-pc.gif"><br>
         <caption>accurate representation of what people think cheaters are doing</caption>
+        <h2>
+            how do they actually work?
+        </h2>
+        <p>Internal Game cheats use a .dll file to attach itself to a game or program to edit the memory</p>
+        <p>what the dll does is basically make the game think that the dll is part of the game, which is called injection or attaching</p>
+        <img src="https://th.bing.com/th/id/OIP.ps3M4YDEfQfkdiTZvIbgtgHaHQ?pid=ImgDet&rs=1"><br>
+        <caption>Cheat Engine scanning memory</caption>
+        <p>internal game cheats aren't going to affect data because it's serversided</p>
+        <p>serverside data may include thnigs like in game currency, or levels, because that data is stored on the server.</p>
+        <img src="https://cheater.run/uploads/posts/2020-07/1595922113_1594143969_valorant_free_hack.jpg" width="800" height="450"><br>
+        <p>This is an example of esp, where it modifies the visuals where you can see the hitboxes of other players</p>
+        <p>It works because it can read game code, which it can pull the position of hitboxes.</p>
+        <h2>Common cheats and why they work</h2>
+        <ul>
+            <li>Wall Hack: tells the game that the walls are transparent</li>
+            <li>Aimbot: takes the position of a hitbox, and makes the character point to it</li>
+            <li>Auto-anything: integrated macro</li>
+            <li>God Mode: set health to an ungodly number</li>
+            <li>Speed/Jump Hacks: set WS/JP to whatever</li>
+            <li>Literally everyhing else: Memory editing</li>
+        </ul>
+        <h2>How can games detect this?</h2>
+        <p>The most obvious solution is to detect the dll injecting</p>
+        <p>For specific cheats, games can use creatice techniques to detct them. Like aimbot, where the game can make a fake player.</p>
+        <p>Or for Automation cheats, where it can stop you if you make too many inputs too quickly</p>
+        <h1>end</h1>
+        <input type="button" onclick="location.href=#top" value="back to top">
     </body>
 </html>

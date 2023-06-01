@@ -5,3 +5,6 @@
 body{
   background-color:black;
 }
+ul{
+  list-style-type:disc;
+}
