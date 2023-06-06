@@ -11,7 +11,7 @@ var i;
   
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
+    this.classList.toggle("activec");
     var content = this.nextElementSibling;
     if (content.style.maxHeight){
       content.style.maxHeight = null;
@@ -19,4 +19,14 @@ for (i = 0; i < coll.length; i++) {
       content.style.maxHeight = content.scrollHeight + "px";
     } 
   });
+}
+const slider = document.getElementById("myRange");
+const wrapper = document.querySelector(".wrapper");
+
+slider.addEventListener("input", function() {
+  wrapper.style.animationDuration = `${this.value}s`;
+});
+function change() {
+  document.body.style.backgroundColor = document.getElementById("color").value;
+  document.getElementById("changebtn").style.color = document.getElementById("color").value;
 }
