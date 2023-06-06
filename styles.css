@@ -21,13 +21,14 @@ pre {
   background-color: inherit;
   color: inherit;
 }
-a:link {
-  color: rgb(0, 0, 0);
+a.domains:link {
+  color: rgb(117, 117, 117);
   background-color: transparent;
   text-decoration: none;
 }
 
-a:visited {
+a.domains:visited{
+  color:white
   background-color: transparent;
   text-decoration: none;
 }
@@ -118,7 +119,6 @@ li a:hover:not(.active) {
 }
 li a, .dropbtn {
   display: inline-block;
-  color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
