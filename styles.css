@@ -166,7 +166,7 @@ li.dropdown {
   font-size: 15px;
 }
 
-.active, .collapsible:hover {
+.activec, .collapsible:hover {
   background-color: #555;
 }
 
@@ -178,7 +178,7 @@ li.dropdown {
   margin-left: 5px;
 }
 
-.active:after {
+.activec:after {
   content: "\2212";
 }
 
