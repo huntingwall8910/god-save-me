@@ -6,7 +6,6 @@ function peniscumballsacks() {
     name = document.getElementById("name").value
     alert("Your name is " + name)
   }
-
 const slider = document.getElementById("myRange");
 const wrapper = document.querySelector(".wrapper");
 
