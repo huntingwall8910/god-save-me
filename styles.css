@@ -22,7 +22,7 @@ pre {
   color: inherit;
 }
 a:link {
-  color: white;
+  color: rgb(0, 0, 0);
   background-color: transparent;
   text-decoration: none;
 }
