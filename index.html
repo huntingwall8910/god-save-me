@@ -31,16 +31,14 @@
 <input type="button" value="click to generate" onclick="gen()">
 <h3>The time is: </h3><h3 id="current-time"></h3>
 <script>
-  window.onload = function() {
+window.onload = function() {
   var currentTimeElement = document.getElementById('current-time');
   function updateCurrentTime() {
     var currentTime = new Date();
-    var options = {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-    };
-    var formattedTime = currentTime.toLocaleString('en-US', options);
+    var hours = currentTime.getHours();
+    var minutes = currentTime.getMinutes();
+    var seconds = currentTime.getSeconds();
+    var formattedTime = hours + ':' + minutes + ':' + seconds;
     currentTimeElement.textContent = formattedTime;
   }
   updateCurrentTime();
