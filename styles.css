@@ -192,8 +192,10 @@ li.dropdown {
 div.content p {
   color:white;                                      
 }
+h3{
+  color:white;
+}
 .c {
-  color:#ffffff;
   font-size:50px
 }
 #time {
