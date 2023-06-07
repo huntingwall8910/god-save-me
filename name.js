@@ -16,19 +16,3 @@ function change() {
   document.body.style.backgroundColor = document.getElementById("color").value;
   document.getElementById("changebtn").style.color = document.getElementById("color").value;
 }
-window.onload = function() {
-  var currentTimeElement = document.getElementById('current-time');
-  function updateCurrentTime() {
-    var currentTime = new Date();
-    var options = {
-      hour: 'numeric',
-      minute: 'numeric',
-      second: 'numeric',
-      timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone
-    };
-    var formattedTime = currentTime.toLocaleString('en-US', options);
-    currentTimeElement.textContent = formattedTime;
-  }
-  updateCurrentTime();
-  setInterval(updateCurrentTime, 1000);
-};
