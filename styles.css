@@ -189,3 +189,6 @@ li.dropdown {
   background-color: #000000;
   transition: all ease-in-out 0.2s
 }
+div.content p {
+  color:white;
+}
