@@ -29,21 +29,14 @@
 <h1 style="color:white">YOOO HOME PAGE</h1>
 <p style="color:white; font-family: Arial, Helvetica, sans-serif">your number will be <span style="color:white; font-family: Arial, Helvetica, sans-serif" id="rand"></span></p>
 <input type="button" value="click to generate" onclick="gen()">
-<h3>The time is: </h3><h3 id="current-time"></h3>
+<h3>The time is: </h3><h3 id="time"></h3>
 <script>
-window.onload = function() {
-  var currentTimeElement = document.getElementById('current-time');
-  function updateCurrentTime() {
-    var currentTime = new Date();
-    var hours = currentTime.getHours();
-    var minutes = currentTime.getMinutes();
-    var seconds = currentTime.getSeconds();
-    var formattedTime = hours + ':' + minutes + ':' + seconds;
-    currentTimeElement.textContent = formattedTime;
-  }
-  updateCurrentTime();
-  setInterval(updateCurrentTime, 1000);
-};
+function updateTime() {
+  var currentTime = new Date();
+  var time = currentTime.getHours() + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
+  document.getElementById('time').innerHTML = time;
+}
+setInterval(updateTime, 1000);
 </script>
 </body>
 </html>
