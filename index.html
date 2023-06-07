@@ -33,8 +33,19 @@
 <script>
 function updateTime() {
   var currentTime = new Date();
-  var time = currentTime.getHours() + ":" + currentTime.getMinutes() + ":" + currentTime.getSeconds();
+  var hours = currentTime.getHours();
+  var minutes = currentTime.getMinutes();
+  var seconds = currentTime.getSeconds();
+  var ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = addLeadingZero(minutes);
+  seconds = addLeadingZero(seconds);
+  var time = hours + ":" + minutes + ":" + seconds + " " + ampm;
   document.getElementById('time').innerHTML = time;
+}
+function addLeadingZero(number) {
+  return (number < 10 ? '0' : '') + number;
 }
 setInterval(updateTime, 1000);
 </script>
