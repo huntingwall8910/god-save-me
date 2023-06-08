@@ -12,43 +12,31 @@ function change() {
   document.getElementById("changebtn").style.color = document.getElementById("color").value;
 }
 document.addEventListener("DOMContentLoaded", function() {
-  var draggableDiv = document.getElementById("draggable");
+  var draggableDivs = document.getElementsByClassName("draggable");
   var isDragging = false;
+  var currentDraggableDiv = null;
 
-  draggableDiv.addEventListener("mousedown", function(event) {
-    isDragging = true;
-  });
+  for (var i = 0; i < draggableDivs.length; i++) {
+    draggableDivs[i].addEventListener("mousedown", function(event) {
+      isDragging = true;
+      currentDraggableDiv = event.target;
+    });
 
-  draggableDiv.addEventListener("dragstart", function(event) {
-    event.dataTransfer.setData("text/plain", event.target.id);
-  });
+    draggableDivs[i].addEventListener("dragstart", function(event) {
+      event.dataTransfer.setData("text/plain", event.target.id);
+    });
+  }
 
   document.addEventListener("mousemove", function(event) {
-    if (isDragging) {
-      draggableDiv.style.left = event.clientX + "px";
-      draggableDiv.style.top = event.clientY + "px";
+    if (isDragging && currentDraggableDiv) {
+      currentDraggableDiv.style.left = event.clientX + "px";
+      currentDraggableDiv.style.top = event.clientY + "px";
     }
   });
 
   document.addEventListener("mouseup", function(event) {
     isDragging = false;
-  });
-
-  document.addEventListener("dragover", function(event) {
-    event.preventDefault();
-  });
-
-  document.addEventListener("drop", function(event) {
-    event.preventDefault();
-    var data = event.dataTransfer.getData("text/plain");
-    var draggableElement = document.getElementById(data);
-    var dropzone = event.target;
-
-    if (dropzone.id === "draggableDiv") {
-      return;
-    }
-
-    dropzone.appendChild(draggableElement);
+    currentDraggableDiv = null;
   });
 });
 function updateTime() {
