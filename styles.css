@@ -211,9 +211,3 @@ h3{
   border: 1px solid #d3d3d3;
   user-select: none;
 }
-#draggable2 {
-  position:absolute;
-  border: 1px solid white;
-  user-select: none;
-  display:block;
-}
