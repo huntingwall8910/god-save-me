@@ -16,9 +16,6 @@ function change() {
   document.body.style.backgroundColor = document.getElementById("color").value;
   document.getElementById("changebtn").style.color = document.getElementById("color").value;
 }
-//Make the DIV element draggagle:
-dragElement(document.getElementById("draggable"));
-
 function dragElement(elmnt) {
   var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
   if (document.getElementById(elmnt.id + "header")) {
@@ -59,6 +56,7 @@ function dragElement(elmnt) {
     document.onmousemove = null;
   }
 }
+dragElement(document.getElementById("draggable"));
 function updateTime() {
   var currentTime = new Date();
   var options = { hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
