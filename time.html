@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <link rel="icon" href="icon.png">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body style="background-color:black">
+        <h3 style="font-size:200px" id="time"></h3>
+        <script>
+            function updateTime() {
+              var currentTime = new Date();
+              var options = { hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+              var time = currentTime.toLocaleTimeString(undefined, options);
+              document.getElementById('time').innerHTML = time;
+            }
+            setInterval(updateTime, 1000);
+        </script>
+    </body>
+</html>
