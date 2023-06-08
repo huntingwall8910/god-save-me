@@ -214,7 +214,7 @@ h3{
 .bounds {
   border: 3px red solid;
   width:500px;
-  height:300px;
+  height:500px;
 }
 
 @keyframes hor-movement {
@@ -242,7 +242,7 @@ h3{
   animation-direction: alternate;
   animation-timing-function: linear;
   background-color:#979797;
-  width:50px;
+  width:75px;
   border: 1px solid white;
   color:white;
 }
