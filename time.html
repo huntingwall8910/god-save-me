@@ -3,8 +3,9 @@
         <link rel="icon" href="icon.png">
         <link rel="stylesheet" href="styles.css">
     </head>
-    <body style="background-color:black">
+    <body  onclick="change()"style="background-color:black">
         <h3 style="font-size:200px" id="time"></h3>
+        <input type="color" id="color">
         <script>
             function updateTime() {
               var currentTime = new Date();
@@ -13,6 +14,9 @@
               document.getElementById('time').innerHTML = time;
             }
             setInterval(updateTime, 1000);
+            function change() {
+                document.getElementById("time").style.color = document.getElementById("color").value
+            }
         </script>
     </body>
 </html>
