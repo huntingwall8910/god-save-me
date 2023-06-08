@@ -222,5 +222,5 @@ h3{
   text-align: center;
   border: 1px solid #d3d3d3;
   user-select: none;
-  display:block;
+  display: inline-block;
 }
