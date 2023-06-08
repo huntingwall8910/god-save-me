@@ -5,7 +5,7 @@
     </head>
     <body  onclick="change()"style="background-color:black">
         <h3 style="font-size:200px" id="time"></h3>
-        <input type="color" id="color"></input>
+        <div style="border: white 1px solid" height=100px width=60px id="container"><input type="color" id="color"></input></div>
         <script>
             function updateTime() {
               var currentTime = new Date();
@@ -17,7 +17,7 @@
             function change() {
                 document.getElementById("time").style.color = document.getElementById("color").value
             }
-            dragElement(document.getElementById("time"));
+            dragElement(document.getElementById("container"));
             function dragElement(elmnt) {
             var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
             if (document.getElementById(elmnt.id + "header")) {
