@@ -212,8 +212,9 @@ h3{
   user-select: none;
 }
 .bounds {
-  width:75%;
-  height: 45%;
+  border: 3px red solid;
+  width:500px;
+  height:300px;
 }
 
 @keyframes hor-movement {
