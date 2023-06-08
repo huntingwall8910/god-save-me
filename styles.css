@@ -212,8 +212,8 @@ h3{
   user-select: none;
 }
 .bounds {
-  width:50%;
-  height: 50%;
+  width:75%;
+  height: 45%;
 }
 
 @keyframes hor-movement {
@@ -241,7 +241,7 @@ h3{
   animation-direction: alternate;
   animation-timing-function: linear;
   background-color:#979797;
-  width:10px;
+  width:50px;
   border: 1px solid white;
   color:white;
 }
