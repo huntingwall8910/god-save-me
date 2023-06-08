@@ -50,7 +50,7 @@ const mouseUpHandler = function () {
     document.removeEventListener('mouseup', mouseUpHandler);
 };
 
-ele.addEventListener('mousedown', mouseDownHandler);
+if (ele) { ele.addEventListener('mousedown', mouseDownHandler);}
 dragElement(document.getElementById("draggable"));
 function updateTime() {
   var currentTime = new Date();
