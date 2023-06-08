@@ -26,37 +26,40 @@ function dragElement(elmnt) {
     elmnt.onmousedown = dragMouseDown;
   }
 
-  function dragMouseDown(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // get the mouse cursor position at startup:
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    document.onmouseup = closeDragElement;
-    // call a function whenever the cursor moves:
-    document.onmousemove = elementDrag;
-  }
+  var isMouseDown,initX,initY,height = draggable.offsetHeight,width = draggable.offsetWidth;
 
-  function elementDrag(e) {
-    e = e || window.event;
-    e.preventDefault();
-    // calculate the new cursor position:
-    pos1 = pos3 - e.clientX;
-    pos2 = pos4 - e.clientY;
-    pos3 = e.clientX;
-    pos4 = e.clientY;
-    // set the element's new position:
-    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-  }
-
-  function closeDragElement() {
-    /* stop moving when mouse button is released:*/
-    document.onmouseup = null;
-    document.onmousemove = null;
-  }
-}
-dragElement(document.getElementById("draggable"));
+  draggable.addEventListener('mousedown', function(e) {
+    isMouseDown = true;
+    document.body.classList.add('no-select');
+    initX = e.offsetX;
+    initY = e.offsetY;
+  })
+  
+  document.addEventListener('mousemove', function(e) {
+    if (isMouseDown) {
+      var cx = e.clientX - initX,
+          cy = e.clientY - initY;
+      if (cx < 0) {
+        cx = 0;
+      }
+      if (cy < 0) {
+        cy = 0;
+      }
+      if (window.innerWidth - e.clientX + initX < width) {
+        cx = window.innerWidth - width;
+      }
+      if (e.clientY > window.innerHeight - height+ initY) {
+        cy = window.innerHeight - height;
+      }
+      draggable.style.left = cx + 'px';
+      draggable.style.top = cy + 'px';
+    }
+  })
+  
+  draggable.addEventListener('mouseup', function() {
+    isMouseDown = false;
+    document.body.classList.remove('no-select');
+  })
 function updateTime() {
   var currentTime = new Date();
   var options = { hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
