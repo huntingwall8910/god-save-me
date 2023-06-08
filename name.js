@@ -11,44 +11,46 @@ function change() {
   document.body.style.backgroundColor = document.getElementById("color").value;
   document.getElementById("changebtn").style.color = document.getElementById("color").value;
 }
-var draggableDiv = document.getElementById("draggable");
-var isDragging = false;
+document.addEventListener("DOMContentLoaded", function() {
+  var draggableDiv = document.getElementById("draggable");
+  var isDragging = false;
 
-draggableDiv.addEventListener("mousedown", function(event) {
-  isDragging = true;
-});
+  draggableDiv.addEventListener("mousedown", function(event) {
+    isDragging = true;
+  });
 
-draggableDiv.addEventListener("dragstart", function(event) {
-  event.dataTransfer.setData("text/plain", event.target.id);
-});
+  draggableDiv.addEventListener("dragstart", function(event) {
+    event.dataTransfer.setData("text/plain", event.target.id);
+  });
 
-document.addEventListener("mousemove", function(event) {
-  if (isDragging) {
-    draggableDiv.style.left = event.clientX + "px";
-    draggableDiv.style.top = event.clientY + "px";
-  }
-});
+  document.addEventListener("mousemove", function(event) {
+    if (isDragging) {
+      draggableDiv.style.left = event.clientX + "px";
+      draggableDiv.style.top = event.clientY + "px";
+    }
+  });
 
-document.addEventListener("mouseup", function(event) {
-  isDragging = false;
-});
+  document.addEventListener("mouseup", function(event) {
+    isDragging = false;
+  });
 
-document.addEventListener("dragover", function(event) {
-  event.preventDefault();
-});
+  document.addEventListener("dragover", function(event) {
+    event.preventDefault();
+  });
 
-document.addEventListener("drop", function(event) {
-  event.preventDefault();
-  var data = event.dataTransfer.getData("text/plain");
-  var draggableElement = document.getElementById(data);
-  var dropzone = event.target;
+  document.addEventListener("drop", function(event) {
+    event.preventDefault();
+    var data = event.dataTransfer.getData("text/plain");
+    var draggableElement = document.getElementById(data);
+    var dropzone = event.target;
 
-  if (dropzone.id === "draggableDiv") {
-    return;
-  }
+    if (dropzone.id === "draggableDiv") {
+      return;
+    }
 
-  dropzone.appendChild(draggableElement);
-});
+    dropzone.appendChild(draggableElement);
+  });
+}):
 function updateTime() {
   var currentTime = new Date();
   var options = { hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
