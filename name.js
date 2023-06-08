@@ -51,7 +51,6 @@ const mouseUpHandler = function () {
 };
 
 if (ele) { ele.addEventListener('mousedown', mouseDownHandler);}
-dragElement(document.getElementById("draggable"));
 function updateTime() {
   var currentTime = new Date();
   var options = { hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
