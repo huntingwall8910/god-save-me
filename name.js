@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     dropzone.appendChild(draggableElement);
   });
-}):
+});
 function updateTime() {
   var currentTime = new Date();
   var options = { hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
