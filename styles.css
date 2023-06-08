@@ -202,21 +202,12 @@ h3{
   font-size: 50px;
 }
 #draggable {
+  cursor: move;
   position: absolute;
   z-index: 9;
   background-color: #201d1d;
   color:white;
   text-align: center;
   border: 1px solid #d3d3d3;
-}
-
-#draggableheader {
-  padding: 10px;
-  cursor: move;
-  z-index: 10;
-  background-color: #2196F3;
-  color: #ffffff;
-}
-.no-select {
   user-select: none;
 }
