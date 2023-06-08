@@ -211,3 +211,14 @@ h3{
   border: 1px solid #d3d3d3;
   user-select: none;
 }
+
+#draggableheader {
+  cursor: move;
+  position: absolute;
+  z-index: 9;
+  background-color:cornflowerblue;
+  color:inherit;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  user-select: none;
+}
