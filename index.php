@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>huntingwall8910</title>
+<link rel='icon' type='image/x-icon' href='icon.png'>
+<link rel=stylesheet href=styles.css>
+</head>
+<body style="background-color:black">
+  <nav>
+    <ul>
+      <li><a class=active href="index.html">Home</a></li>
+      <li class="dropdown">
+        <a href="#" class=dropbtn>projects</a>
+          <div class="dropdown-content">
+            <a href="nameguesser.html"> Name guessr</a>
+            <a href="epilepsymachine.html">epilepsy machine</a>
+            <a href="colors.html">color thing</a>
+            <a href="endless.html">endless</a>
+            <a href="bounce.html">bounce</a>
+          </div>
+      </li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="news.html">News & Upd8s</a></li>
+      <li><a href="blog.html">blog</a></li>
+      <li style="float:right"><p id="sitename"style="float:right"></p></li>
+    </ul>
+  </nav>
+<script src="name.js"></script>
+<img class="rainbow" style="float:left" src="pneumococcus.png">
+
+<h1 style="color:white">YOOO HOME PAGE</h1>
+<p style="color:white; font-family: Arial, Helvetica, sans-serif">your number will be <span style="color:white; font-family: Arial, Helvetica, sans-serif" id="rand"></span></p>
+<input type="button" value="click to generate" onclick="gen()">
+<h3 class=c>The time is: </h3><h3 id="time"></h3>
+<input type="button" onclick="location.href='time.html'" value="enhance"></input>
+<script>
+setInterval(updateTime, 1000);
+</script>
+
+<div id="draggable" class="draggable"><p>hi im huntingwall8910 this is my website</p><p>draggable div (is this cool?)</p><p>(pls stay)</p></div>
+</body>
+</html>
