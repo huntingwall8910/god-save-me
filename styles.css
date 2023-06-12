@@ -245,3 +245,10 @@ h3{
   border: 1px solid white;
   color:white;
 }
+@font-face {
+  font-family: RoundedArial;
+  src: url(ARLRDBD.ttf);
+}
+nav {
+  font-family: RoundedArial;
+}
