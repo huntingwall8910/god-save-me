@@ -4,7 +4,7 @@
 body {
   background-image: url(s.gif);
   background-repeat: repeat;
-  background-size: cover;
+  background-size: contain;
 }
 pre {
   color:white;
