@@ -4,6 +4,8 @@
 body {
   background-image: url(s.gif);
   background-repeat: repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 pre {
   color:white;
