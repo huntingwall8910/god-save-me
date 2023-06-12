@@ -1,6 +1,10 @@
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+body {
+  background-image: url(s.gif);
+  background-repeat: repeat;
+}
 pre {
   color:white;
   width: fit-content;
