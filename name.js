@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 
     draggableDivs[i].addEventListener("dragstart", function(event) {
-      event.dataTransfer.setData("text/plain", event.target.id);
+      event.dataTransfer.setData("text/html", event.target.id);
     });
   }
 
