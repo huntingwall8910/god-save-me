@@ -1,3 +1,4 @@
+
 function gen() {
     document.getElementById("rand").innerHTML = Math.floor(Math.random() * 10000000)
   }
@@ -80,4 +81,4 @@ function includeHTML() {
     }
   }
 }
-includeHTML()includeHTML()
+document.getElementById("sitename").innerHTML = window.location.hostname;
