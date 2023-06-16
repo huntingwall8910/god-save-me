@@ -45,3 +45,12 @@ function updateTime() {
   var time = currentTime.toLocaleTimeString(undefined, options);
   document.getElementById('time').innerHTML = time;
 }
+function isMobileDevice() {
+  return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+if (isMobileDevice()) {
+  window.location.replace("mobile.html")
+} else {
+  //no action
+}
