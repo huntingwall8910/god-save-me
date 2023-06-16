@@ -1,4 +1,3 @@
-document.getElementById("sitename").innerHTML = window.location.hostname;
 function gen() {
     document.getElementById("rand").innerHTML = Math.floor(Math.random() * 10000000)
   }
@@ -61,7 +60,7 @@ function includeHTML() {
   for (i = 0; i < z.length; i++) {
     elmnt = z[i];
     /*search for elements with a certain atrribute:*/
-    file = elmnt.getAttribute("snippet");
+    file = elmnt.getAttribute("sn");
     if (file) {
       /* Make an HTTP request using the attribute value as the file name: */
       xhttp = new XMLHttpRequest();
@@ -81,3 +80,4 @@ function includeHTML() {
     }
   }
 }
+includeHTML()includeHTML()
