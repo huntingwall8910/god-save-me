@@ -112,6 +112,7 @@ li a {
   text-align: center;
   padding: none;
   text-decoration: none;
+  background-size:cover
 }
 
 li a:hover:not(.active) {
