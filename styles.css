@@ -33,7 +33,7 @@ a.domains:link {
 }
 
 a.domains:visited{
-  color:white
+  color:white;
   background-color: transparent;
   text-decoration: none;
 }
