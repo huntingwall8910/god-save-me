@@ -67,4 +67,3 @@ if (isMobileDevice()) {
 } else {
   //no action
 }
-document.getElementById("sitename").innerHTML = window.location.hostname;
