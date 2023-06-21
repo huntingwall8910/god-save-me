@@ -1,0 +1,60 @@
+<html>
+
+<head>
+<meta name="GENERATOR" content="Microsoft FrontPage 6.0">
+<title>My Web Page</title>
+<font face="Comic Sans MS">
+<meta http-equiv="Content-Type"
+content="text/html; charset=iso-8859-1">
+<script>
+function updateTime() {
+  var currentTime = new Date();
+  var options = { hour12: true, hour: 'numeric', minute: 'numeric', second: 'numeric' };
+  var time = currentTime.toLocaleTimeString(undefined, options);
+  document.getElementById('time').innerHTML = time;
+}
+function gen() {
+    document.getElementById("rand").innerHTML = Math.floor(Math.random() * 10000000)
+  }
+setInterval(updateTime, 1000);
+</script>
+</head>
+<body
+background="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZFeCSaUt67wjE2iz2P0RjCffep0DtN0wWJA&amp;usqp=CAU">
+
+</font>
+
+<h1 align="center"><font color="#FFFFFF" face="Comic Sans MS">MY HOME PAGE</font></h1>
+<p align="center">
+<font face="Comic Sans MS">
+<img src=pneumococcus.png width="88" height="78"><img src=pneumococcus.png width="88" height="78"><img src=pneumococcus.png width="88" height="78"><img src=pneumococcus.png width="88" height="78"><img src=pneumococcus.png width="88" height="78"></font><p align="center"><font color="#FF0000" size="6"
+face="Comic Sans MS"><marquee align="middle" width="554">THIS IS MY VERY COOL WEBSITE</marquee></font></p>
+
+<p align="center"><font face="Comic Sans MS"><img
+src="https://techcrunch.com/wp-content/uploads/2014/06/babygif.gif?w=700&amp;crop=1"
+alt="A Brief History Of The Dancing Baby Meme | TechCrunch"
+width="148" height="111" /><img
+src="gif_fire.gif" width="96" height="96"
+/><img src="gif_fire.gif" width="96"
+height="96" /><img src="gif_fire.gif"
+width="96" height="96" /><img
+src="gif_fire.gif" width="96" height="96"
+/><img
+src="https://techcrunch.com/wp-content/uploads/2014/06/babygif.gif?w=700&amp;crop=1"
+alt="A Brief History Of The Dancing Baby Meme | TechCrunch"
+width="151" height="113" /></font></p>
+<p align="center"><font face="Comic Sans MS"><img src="counter.gif"></font></p>
+
+<p align="center"><font face="Comic Sans MS"><a href=https://geocities.org><img src="geocities.gif"></a></font></p>
+<p align="center"><font color="#FFFFFF" face="Comic Sans MS">Hello netizens</font></p>
+<p align="center"><font face="Comic Sans MS" color="#FFFFFF">This webpage was 
+made with Microsoft Frontpage</font></p>
+
+<p align="center"><font color="#FFFFFF" face="Comic Sans MS">I go by 
+huntingwall8910 on most platforms</font></p>
+<p align="center"><font face="Comic Sans MS">your number will be </font> <span id=rand></span></p>
+<input style="position:relative; left: 48%;" type=button onclick=gen() value=generate>
+<h1 align="center"><font face="Comic Sans MS">the time is </font> <span id=time></span></h1>
+<input style="position:relative; left: 46.5%;" type=button onclick="location.href = 'index.html'" value="Go to Modern Version">
+</body>
+</html>
