@@ -65,5 +65,5 @@ function isMobileDevice() {
 if (isMobileDevice()) {
   window.location.replace("mobile.html")
 } else {
-  //no action
+  // No action
 }
