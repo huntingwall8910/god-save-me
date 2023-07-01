@@ -1,5 +1,9 @@
+@font-face {
+  font-family: "oldms";
+  src: url("/ms-sans-sf.ttf");
+}
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: oldms;
   color:white;
 }
 body{
