@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "oldms";
+  src: url("ms-sans-sf.tff");
+}
 * {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -247,11 +251,4 @@ h3{
   width:75px;
   border: 1px solid white;
   color:white;
-}
-@font-face {
-  font-family: RoundedArial;
-  src: url(ARLRDBD.ttf);
-}
-li a {
-  font-family: RoundedArial;
 }
