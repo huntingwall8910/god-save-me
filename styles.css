@@ -3,7 +3,7 @@
   src: url("ms-sans-sf.tff");
 }
 * {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: oldms;
 }
 body {
   background-image: url(s.gif);
