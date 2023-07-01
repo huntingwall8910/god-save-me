@@ -1,6 +1,6 @@
 @font-face {
   font-family: "oldms";
-  src: url("ms-sans-sf.tff");
+  src: url("ms-sans-sf.ttf");
 }
 * {
   font-family: oldms;
