@@ -73,10 +73,10 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     function zoomies() {
       var nekoSpeed = 100;
-      setTimeout(zoomies() => {
-        var nekoSpeed = 10
-      }, 10000);
-    }
+      setTimeout(() => {
+        var nekoSpeed = 10;
+      }, 1000);
+    };
     function create() {
         nekoEl.id = "oneko";
         nekoEl.style.width = "32px";
