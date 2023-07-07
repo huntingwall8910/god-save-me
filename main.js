@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function() {
     span.onclick = function() {
       modal.style.display = "none";
     }
-    }
   } else {
     //No Action
   }
