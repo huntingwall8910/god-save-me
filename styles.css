@@ -19,7 +19,7 @@ body {
   left: 0;
   top: 0;
   width: 400px;
-  height: 200px;
+  height: 200px; /* Full height */
   overflow: auto; /* Enable scroll if needed */
 }
 
@@ -253,9 +253,9 @@ h3{
   user-select: none;
 }
 .bounds {
-  border: inherit;
-  width:inherit;
-  height:inherit;
+  border: 3px red solid;
+  width:500px;
+  height:500px;
 }
 
 @keyframes hor-movement {
