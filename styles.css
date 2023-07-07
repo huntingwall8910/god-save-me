@@ -11,6 +11,41 @@ body {
   background-size: cover;
   cursor: url(aim_guy.png), auto;
 }
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 400px;
+  height: 200px;
+  overflow: auto; /* Enable scroll if needed */
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
 pre {
   color:white;
   width: fit-content;
@@ -218,9 +253,9 @@ h3{
   user-select: none;
 }
 .bounds {
-  border: 3px red solid;
-  width:500px;
-  height:500px;
+  border: inherit;
+  width:inherit;
+  height:inherit;
 }
 
 @keyframes hor-movement {
