@@ -71,6 +71,9 @@ document.addEventListener("DOMContentLoaded", function() {
             [-1, -1],
         ],
     };
+    function zoomies() {
+      var nekoSpeed = 100;
+    };
     function create() {
         nekoEl.id = "oneko";
         nekoEl.style.width = "32px";
