@@ -290,9 +290,9 @@ h3{
 }
 @keyframes elizabeth {
   0% {left:0px}
-  100% {left:95%}
+  100% {left:90%}
 }
 .elizabeth {
   position:absolute;
-  animation: elizabeth 1.5s ease-in-out 0s infinite alternate;
+  animation: elizabeth 3s ease-in-out 0s infinite alternate;
 }
