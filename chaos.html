@@ -5,9 +5,9 @@
   function addRandomCharacter() {
   const element = document.getElementById("rand")
   let randomCharCode = Math.floor(Math.random() * 94) + 33;
-  if (randomCharCode == 10) { randomCharCode = 9;}
   const randomCharacter = String.fromCharCode(randomCharCode);
-  const content = element.innerText
+  let content = element.innerText
+  let content = content.replace(/\n/g, "!")
   element.innerHTML = content + randomCharacter
 }
 setInterval(addRandomCharacter,50)
