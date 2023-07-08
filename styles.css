@@ -289,8 +289,8 @@ h3{
   color:white;
 }
 @keyframes elizabeth {
-  from { margin-left: 0;}
-  to {margin-left: 100%;}
+  0% {left:0px}
+  100% {left:1000px}
 }
 .elizabeth {
   position:absolute;
