@@ -284,7 +284,7 @@ h3{
   animation-direction: alternate;
   animation-timing-function: linear;
   background-color:#979797;
-  width:75px;
+  width:inherit;
   border: 1px solid white;
   color:white;
 }
