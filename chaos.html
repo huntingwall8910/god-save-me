@@ -2,24 +2,14 @@
 <body id=btn style="overflow: hidden;background-color:black">
 <script src="main.js"></script>
 <script>
-  function addRandomCharacter(element) {
-  // Generate a random character code between 33 and 126 (inclusive)
+  function addRandomCharacter() {
+  const element = document.getElementById("rand")
   const randomCharCode = Math.floor(Math.random() * 94) + 33;
-  
-  // Convert the character code to its corresponding character
   const randomCharacter = String.fromCharCode(randomCharCode);
-  
-  // Get the current text of the element
-  const currentText = element.innerHTML;
-  
-  // Add the random character to the current text
-  const newText = currentText + randomCharacter;
-  
-  // Update the text of the element
-  element.textContent = newText;
+  const content = element.innerText
+  element.innerHTML = content + randomCharacter
 }
-var a = document.getElementById("rand")
-setInterval(addRandomCharacter(a),1000)
+setInterval(addRandomCharacter,1000)
 </script>
 <p style="color:white;"id="rand">!</p><input type="button" value="clear text" onclick="document.getElementById('rand').innerHTML = '!'">
 <div class="bounds" style="position:absolute;border:none;width:1000px;height:1000px;"><img style="width:75px"class=image src=pneumococcus.png></div>
