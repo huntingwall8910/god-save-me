@@ -3,12 +3,12 @@
 <script src="main.js"></script>
 <script>
   function addRandomCharacter() {
-  const element = document.getElementById("rand")
-  let randomCharCode = Math.floor(Math.random() * 94) + 33;
-  const randomCharacter = String.fromCharCode(randomCharCode);
-  let content = element.innerText
-  let content = content.replace(/\n/g, "!")
-  element.innerHTML = content + randomCharacter
+  const c = document.getElementById("rand")
+  const d = Math.floor(Math.random() * 94) + 33;
+  const e = String.fromCharCode(d);
+  const b = c.innerText
+  const a = b.replace(/\n/g, "!")
+  c.innerHTML = a + e
 }
 setInterval(addRandomCharacter,50)
 </script>
