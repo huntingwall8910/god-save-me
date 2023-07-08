@@ -14,12 +14,7 @@ function change() {
 }
 //wait until page loads
 document.addEventListener("DOMContentLoaded", function() {
-  var ns = document.getElementById("sp").value
-  var nekoSpeed = 10;
-  if (ns) {
-    var nekoSpeed = ns;
-  } else {
-
+  
   }
   (function oneko() {
     const nekoEl = document.createElement("div");
@@ -31,6 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let idleTime = 0;
     let idleAnimation = null;
     let idleAnimationFrame = 0;
+    var nekoSpeed = 10;
     const spriteSets = {
         idle: [[-3, -3]],
         alert: [[-7, -3]],
