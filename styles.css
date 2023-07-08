@@ -293,6 +293,6 @@ h3{
   100% {left:90%}
 }
 .elizabeth {
-  position:absolute;
+  position:relative;
   animation: elizabeth 3s ease-in-out 0s infinite alternate;
 }
