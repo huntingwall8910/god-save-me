@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     create();
-  })();
+  })
 
   var modal = document.getElementById("Modal");
   var btn = document.getElementById("btn");
