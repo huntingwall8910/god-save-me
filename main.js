@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //No Action
   }
   //snippet loader
-  fetch('nav.html')
+  fetch('/nav.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('snippet-container').innerHTML = data;
