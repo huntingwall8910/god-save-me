@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function() {
         nekoEl.style.width = "32px";
         nekoEl.style.height = "32px";
         nekoEl.style.position = "fixed";
-        nekoEl.style.backgroundImage = "url('./oneko.gif')";
+        nekoEl.style.backgroundImage = "url('/oneko.gif')";
         nekoEl.style.imageRendering = "pixelated";
         nekoEl.style.left = "16px";
         nekoEl.style.top = "16px";
@@ -137,7 +137,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //No Action
   }
   //snippet loader
-  fetch('nav.html')
+  fetch('/nav.html')
   .then(response => response.text())
   .then(data => {
     document.getElementById('snippet-container').innerHTML = data;
