@@ -110,7 +110,7 @@ async function openFile(){
     data = await file.getFile()
     footer.textContent = data.name
     let text = await data.text()
-    editor.innerText = text
+    editor.textContent = text
     fileLineCounter()
 }
 open.addEventListener("click",openFile)

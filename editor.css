@@ -54,7 +54,7 @@ footer {
     width: 100%;
     outline: none;
     overflow-x: auto;
-    white-space:nowrap;
+    white-space:pre;
 }
 #lines {
     font-size: 16px;
