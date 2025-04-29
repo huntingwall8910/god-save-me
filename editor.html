@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - Google Drive</title>
+    <link rel="stylesheet" href="editor.css">
+    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/Google_Drive_icon_%282020%29.svg/512px-Google_Drive_icon_%282020%29.svg.png">
+    <script defer src="editor.js"></script>
+    <nav>
+        <h1>Text Editor</h1>
+        <button id="open">Open File</button>
+        <button id="save">Save</button>
+        <button id="save-as">Save As</button>
+        <button class="right" id="settings">Settings</button>
+    </nav>
+</head>
+<body>
+    <main>
+        <div id="lines">1</div>
+        <div id="editor" contenteditable="true"></div>
+        <div id="modal">
+            <p>text background:</p>
+            <input type="color" id="textbg">
+            <p>text:</p>
+            <input type="color" id="text">
+            <p>line count background:</p>
+            <input type="color" id="linesbg">
+            <p>nav background:</p>
+            <input type="color" id="navbg">
+            <p>nav border:</p>
+            <input type="color" id="navborder">
+            <p>button backgrounds:</p>
+            <input type="color" id="buttonsbg">
+            <p>button borders:</p>
+            <input type="color" id="buttonsborder">
+            <p>footer background:</p>
+            <input type="color" id="footerbg">
+            <p>modal background (this one):</p>
+            <input type="color" id="modalbg">
+            <p>modal border (this one):</p>
+            <input type="color" id="modalborder"><br>
+            <button id="save-colors">Save</button>
+            <button id="reset-colors">Reset</button>
+        </div>
+    </main>
+    <footer>
+        Untitled.txt
+    </footer>
+</body>
+</html>
