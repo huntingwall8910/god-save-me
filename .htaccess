@@ -1,4 +1,0 @@
-#this whole fucking time vercel doesnt use an apache server
-RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^([^.]+)$ $1.html [NC,L]

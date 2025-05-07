@@ -1,0 +1,11 @@
+<body style='margin:0;padding:0;background-color: black;'><canvas id="canvas" width=1000 height=1000></canvas></body>
+<script defer src="orbits.js"></script>
+<p id="datetime" style="position:fixed;top:0;left:0;color:white;font-family: Arial, Helvetica, sans-serif;font-size:20px"></p>
+<script>
+    setInterval(() => {
+        const now = new Date();
+        const datetime = now.toLocaleTimeString();
+        document.getElementById("datetime").innerHTML = datetime
+        ,1000
+    });
+</script>

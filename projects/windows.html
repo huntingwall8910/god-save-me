@@ -1,0 +1,19 @@
+<script>
+        let x = Math.random() * 500
+        let y = Math.random() * 500
+        let dx = dy = 3
+        let w = h = 150
+	let win = window.open("","_blank", `width=${w},height=${h},`)
+	if (!win) alert("please enable popups")
+        setInterval(() => {
+	    win.moveTo(x,y)
+            x += dx
+            y += dy
+            if (x < 0 || screen.width - x < w + 100) {
+	    	dx = -dx
+	    }
+            if (y < 0 || screen.height - y < h + 50) {
+	    	dy = -dy
+	    }
+	},10)
+</script>
