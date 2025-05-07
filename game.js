@@ -1,3 +1,7 @@
+if (window.devicePixelRatio == 1){
+    alert("please play at 100% zoom")
+    window.location.reload()
+}
 const canvas = document.getElementById("canvas")
 const c = canvas.getContext("2d");
 const body = document.getElementById("body")
