@@ -2,6 +2,11 @@ if (window.devicePixelRatio == 1){
     alert("please play at 100% zoom")
     window.location.reload()
 }
+if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || localStorage.getItem("mobile")){
+    alert("mobile user detected, sending to shadow realm")
+    window.location.replace("youtube.com/@hw8910")
+    localStorage.setItem("mobile",true)
+}
 const canvas = document.getElementById("canvas")
 const c = canvas.getContext("2d");
 const body = document.getElementById("body")
