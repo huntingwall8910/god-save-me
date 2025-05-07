@@ -3,7 +3,7 @@ if (window.devicePixelRatio == 1){
     window.location.reload()
 }
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || localStorage.getItem("mobile")){
-    alert("mobile user detected, sending to shadow realm")
+    alert("mobile isnt supported, sending to shadow realm")
     window.location.replace("youtube.com/@hw8910")
     localStorage.setItem("mobile",true)
 }
