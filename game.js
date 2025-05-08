@@ -4,7 +4,7 @@ if (window.devicePixelRatio !== 1){
 }
 if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || localStorage.getItem("mobile")){
     alert("mobile isnt supported, sending to shadow realm")
-    window.location.replace("youtube.com/@hw8910")
+    window.location.replace("https://youtube.com/@hw8910")
     localStorage.setItem("mobile",true)
 }
 const canvas = document.getElementById("canvas")
