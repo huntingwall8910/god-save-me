@@ -1,4 +1,4 @@
-if (window.devicePixelRatio == 1){
+if (window.devicePixelRatio !== 1){
     alert("please play at 100% zoom")
     window.location.reload()
 }
