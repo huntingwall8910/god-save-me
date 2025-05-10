@@ -69,6 +69,7 @@ enemiesArr.push(new Enemy(canvas,pArr,width * Math.random(),-75,50,50,"White",0,
 let xparallax = 0
 let yparallax = 0
 let enemiesKilled = 0
+let startTime = performance.now()
 function animate(){
     if (stopped) return
     c.clearRect(0,0,width,height)
@@ -110,10 +111,17 @@ function animate(){
         }
       }
     player.update()
-    xparallax += player.dx / 10
-    yparallax += player.dy / 10
+    xparallax += player.dx / 32
+    yparallax += player.dy / 32
     canvas.style.backgroundPositionY = `${yparallax}px`
     canvas.style.backgroundPositionX = `${xparallax}px`
+    let deltaTime = (performance.now() - startTime) / 1000
+    startTime = performance.now()
+    c.font = "12px Arial"
+    c.fillStyle = "White"
+    c.fillText(`FPS:${(1 / deltaTime).toPrecision(3)}`,0,10)
+    c.font = "8px Arial"
+    c.fillText(`(based on time between animation cycles)`,0,20)
     requestAnimationFrame(animate)
 }
 animate()
