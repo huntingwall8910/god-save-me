@@ -2,8 +2,8 @@ body {
     cursor:crosshair;
 }
 canvas {
-    background-position-y: 0px;
-    background-size: cover;
+    background-size:contain;
+    background-repeat:repeat;
     background-image:url('space.png');
 }
 /*
