@@ -79,6 +79,7 @@ function animate(){
         alert(`u die, ${enemiesKilled} enemies killed`)
         window.location.refresh
     }
+    if (player.health <= 0) end()
     for (let i=0;i<pArr.length;i++){
         if(!pArr[i]) continue
         pArr[i].update()
@@ -93,6 +94,7 @@ function animate(){
     }
     for (let i=0;i < enemiesArr.length;i++){
         if (!enemiesArr[i]) continue
+        if (enemiesArr[i].health <= 0) end()
         if (enemiesArr[i].health <= 0){
             enemiesKilled++
             summonPelletArc(canvas,enemiesArr[i].x + enemiesArr[i].width / 2, enemiesArr[i].y + enemiesArr[i].height / 2,0,0,Math.PI * 2,10,pArr)
