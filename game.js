@@ -117,7 +117,6 @@ function animate(){
     canvas.style.backgroundPositionX = `${xparallax}px`
     let now = performance.now();
     let deltaTime = (now - startTime) / 1000
-    console.log(deltaTime)
     startTime = performance.now()
     c.font = "12px Arial"
     c.fillStyle = "White"
