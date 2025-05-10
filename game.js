@@ -4,7 +4,8 @@ if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigat
     localStorage.setItem("mobile",true)
 }
 if (window.devicePixelRatio !== 1){
-    alert("please play at 100% zoom")
+    if (window.devicePixelRatio > 1){alert("zoom out until this number equals 1: " + window.devicePixelRatio)}
+    if (window.devicePixelRatio < 1){alert("zoom in until this number equals 1: " + window.devicePixelRatio)}
     window.location.reload()
 }
 import Enemy from "./Enemy.js"
@@ -166,3 +167,10 @@ document.addEventListener("visibilitychange", () => {
         stopped = false
     }
 });
+window.addEventListener("resize", () => {
+    if (window.devicePixelRatio !== 1){
+        if (window.devicePixelRatio > 1){alert("zoom out until this number equals 1: " + window.devicePixelRatio)}
+        if (window.devicePixelRatio < 1){alert("zoom in until this number equals 1: " + window.devicePixelRatio)}
+        window.location.reload()
+    }
+})
