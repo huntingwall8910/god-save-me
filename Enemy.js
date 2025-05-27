@@ -16,9 +16,6 @@ export default class Enemy {
         this.width = w
         this.height = h
         this.hitbox = false
-        window.addEventListener("keyup", (e) => {
-            if (e.key == 'h') this.hitbox = !this.hitbox
-        })
         if (/\./.test(c)){
             this.image = new Image()
             this.image.src = c

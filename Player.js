@@ -3,9 +3,6 @@ export default class Player {
     constructor(canvas,moving,x,y,health = 100){
         this.canvas = canvas
         this.hitbox = false
-        window.addEventListener("keyup", (e) => {
-            if (e.key == 'h') this.hitbox = !this.hitbox
-        })
         this.image = new Image()
         this.image.src = "player.png"
         this.c = this.canvas.getContext("2d")

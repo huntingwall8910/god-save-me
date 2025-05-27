@@ -148,7 +148,12 @@ window.addEventListener("keydown", (e) => {
     }
 })
 window.addEventListener("keyup", (e) => {
-
+    if (e.key == "h") {
+        player.hitbox = !player.hitbox
+        for (let enemy of enemiesArr) {
+            enemy.hitbox = !enemy.hitbox;
+        }
+    }
     if (e.key == "p") console.log(pArr)
     if (e.key == "w") moving.forward = false
     if (e.key == "a") moving.left = false

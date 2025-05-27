@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grow a Tree (REALISTIC)</title>
+</head>
+<body>
+    <h1>GROW A TREE SIMULATOR (REAL NOT FAKE)</h1>
+    <button>start growing</button>
+    <p></p>
+</body>
+<script>
+    const button = document.querySelector("button")
+    const disp = document.querySelector("p")
+    function format(ms) {
+        const years = Math.floor(ms / (1000 * 60 * 60 * 24 * 365.25));
+        ms -= years * 1000 * 60 * 60 * 24 * 365.25;
+        const days = Math.floor(ms / (1000 * 60 * 60 * 24));
+        ms -= days * 1000 * 60 * 60 * 24;
+        const hours = Math.floor(ms / (1000 * 60 * 60));
+        ms -= hours * 1000 * 60 * 60;
+        const minutes = Math.floor(ms / (1000 * 60));
+        ms -= minutes * 1000 * 60;
+        const seconds = Math.floor(ms / 1000);
+        ms -= seconds * 1000;
+        const milliseconds = Math.floor(ms);
+        return [years, days, hours, minutes, seconds, milliseconds];
+    }
+
+    if (localStorage.getItem("start")){
+        button.disabled = true
+        function update(){
+            const remaining = localStorage.getItem("endtime") - Date.now()
+            if (remaining <= 0) {
+                disp.textContent = "Tree is fully grown!"
+                return
+            }
+            const f = format(remaining)
+            disp.textContent = `${f[0]} years, ${f[1]} days, ${f[2]} hours, ${f[3]} minutes, ${f[4]} seconds, ${f[5]} milliseconds remaining`
+            requestAnimationFrame(update)
+        }
+        update()
+    }
+    button.addEventListener("click", () => {
+        const startTime = Date.now()
+        localStorage.setItem("start",startTime)
+        const endTime = startTime + 631152000000 //2 decades in ms
+        localStorage.setItem("end",endTime)
+        window.location.reload()
+    })
+</script>
+</html>
