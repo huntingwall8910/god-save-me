@@ -1,0 +1,10 @@
+<h1 style="user-select: none;">Click to ten (not affiliated with any other game with the same name)</h1>
+<p id="disp" style="position: fixed; top:50%;left:50%;user-select: none;">0</p>
+<script>
+    let num = 0
+    document.addEventListener("mouseup", () => {
+        num++
+        document.getElementById("disp").textContent = num
+        if (num >= 10) window.close()
+    })
+</script>
