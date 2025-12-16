@@ -59,7 +59,7 @@ c.strokeStyle = "white"
 c.fillStyle = "White"
 let hue = 0;
 function animate(){
-    c.fillStyle = 'rgba(0, 0, 0, .05)';
+    c.fillStyle = 'rgba(0, 0, 0, .1)';
     c.fillRect(-width, -height,width * 2,height * 2);
     // c.clearRect(-width,-height,width * 2,height * 2)
     c.fillStyle = `hsl(${hue % 360} 100% 50%)`
